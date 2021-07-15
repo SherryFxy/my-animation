@@ -1,38 +1,99 @@
-.App {
+html, body, body > div{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.container{
+  float: left;
+  width: 50%;
+  height: 50%;
+  background-color: rebeccapurple;
+}
+.square-wrapper, .square{
+  width: 100%;
+  height: 90%;
+}
+.square{
+  background-color: aquamarine;
+}
+
+
+.fade-enter{
+  opacity: 0;
+  transform: translateX(100%);
+}
+.fade-enter-active{
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 500ms;
+}
+.fade-exit{
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade-exit-active{
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 500ms;
+}
+
+
+
+.change{
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: bisque;
+  font-size: 100px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-enter{
+  transform: translate(100%, 0);
+  opacity: 0;
+}
+.btn-enter-active{
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: all 500ms;
+}
+.btn-exit{
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.btn-exit-active{
+  transform: translate(-100%, 0);
+  opacity: 0;
+  transition: all 500ms;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.friend-enter{
+  transform: translate(100%, 0);
+  opacity: 0;
+}
+.friend-enter-active{
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: all 500ms;
+}
+.friend-exit{
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.friend-exit-active{
+  transform: translate(-100%, 0);
+  opacity: 0;
+  transition: all 500ms;
+}
+.friend{
+  width: 50%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: cadetblue;
+  border-bottom: 1px solid crimson;
 }
